@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature 'Editing a post' do
   let!(:post) { create(:post) }
-
   scenario 'with valid attributes' do
     visit post_path(post)
     click_link 'Edit Post'

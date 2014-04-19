@@ -1,29 +1,5 @@
 class PostsController < ApplicationController
-<<<<<<< HEAD
-  def index
-  end
-  
-  def new
-    @post = Post.new
-  end
-  
-  def create
-    @post = Post.new(post_params)
-    @post.save
-    redirect_to post_path(@post)
-  end
-  
-  private
-  
-  def post_params
-    params.require(:post).permit(:title, :content, :author)
-  end
-  
-  def show
-    @post = Post.find(params[:id])
-  end
-end
-=======
+
   before_action :find_post, except: [:index, :new, :create
                                     ]
   def index
@@ -69,4 +45,3 @@ end
     params.require(:post).permit(:title, :content, :author)
   end
 end
->>>>>>> 3678cff38b5360a97298b0b0eadceeefcc7b9dce

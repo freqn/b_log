@@ -1,12 +1,6 @@
 require 'spec_helper'
-
-feature 'Viewing a post spec' do
-  let!(:post) { create(:post) }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 3678cff38b5360a97298b0b0eadceeefcc7b9dce
+feature 'viewing a post spec' do
+  let!(:post) { create(:post)}
   scenario do
     visit posts_path
     click_link post.title
