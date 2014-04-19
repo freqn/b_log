@@ -4,10 +4,10 @@
       <h1><%= @post.title %></h1>
       <%= link_to "Edit Post", edit_post_path(@post) %>
       <%= link_to "Delete Post", @post, method: :delete %>
-      <%= link_to "Add Comment", @post, method: :create %>
+      <%= link_to "Add Comment", new_post_comment_path(@post) %>
     </div>
     <div id="author">
-      <p>By: <%= @post.author %></p>
+      <p>By: <%= @post.author%></p>
       <p><%= @post.created_at.to_s(:short) %></p>
     </div>
     <div id="content">
@@ -15,3 +15,11 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div>
+  <% @post.comments.each do |comment| %>
+    <div>
+        <li> <%= comment.content %> </li>
+        <li> <%= link_to comment.author, post_comment_path(@post,comment) %> </li>
+        <% end %>
+    </div>
