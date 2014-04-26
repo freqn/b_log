@@ -6,7 +6,11 @@ FactoryGirl.define do
   end
     factory :comment do
       association :post
-      author "Rohit"
+      author "Author"
       content "This must be at least 15 characters"
   end
+   factory :user do
+      username= 'Username'
+      password= 'Password'
+ end
 end
