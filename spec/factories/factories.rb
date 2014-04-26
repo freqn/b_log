@@ -10,7 +10,7 @@ FactoryGirl.define do
       content "This must be at least 15 characters"
   end
    factory :user do
-      username= 'Username'
-      password= 'Password'
- end
+      username 'username'
+      password 'password'
+  end
 end
